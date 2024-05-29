@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback</title>
+    <script>
+        // Function to detect iOS devices
+        function isIOS() {
+            return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        }
+
+        // Function to detect macOS devices
+        function isMac() {
+            return /Macintosh/.test(navigator.userAgent) && !isIOS();
+        }
+
+        // Redirect based on device type
+        function redirectBasedOnDevice() {
+            if (isIOS()) {
+                window.location.href = "https://apps.apple.com/app/apple-store/id993160329?action=write-review";
+            } else if (isMac()) {
+                window.location.href = "https://apps.apple.com/app/apple-store/id918858936?action=write-review";
+            } else {
+                // If not iOS or macOS, you can provide a fallback URL
+                window.location.href = "https://form.jotform.com/230566469605362?appName=Airmail";
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        // Call the redirect function when the page loads
+        redirectBasedOnDevice();
+    </script>
+</body>
+</html>

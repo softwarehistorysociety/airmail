@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 
+Sitemap: https://help.airmailapp.com/sitemap.xml

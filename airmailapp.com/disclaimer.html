@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	
+	
+	
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="apple-touch-icon" sizes="57x57" href="static/images/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="static/images/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="static/images/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="static/images/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="static/images/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="static/images/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="static/images/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="static/images/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="static/images/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="static/images/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="static/images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon-16x16.png">
+<link rel="manifest" href="https://airmailapp.com/manifest.json">
+
+
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/static/images/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta name="google-site-verification" content="r43AaNYnxKK5D820tajqAh3G6TPavguY29Zd_3X1OXU" />
+
+
+<meta name="msvalidate.01" content="0B585562DA7B2D9AFBEBBFCEF4CD6AEA" />
+        <meta name="description" content="Airmail - Lightning Fast Mail Client for Mac and iOS">
+        <meta name="google-site-verification" content="9B4KT-28yoKigIKoZQ6cZ9d6VV8EJ-VasI0rHqv2pbQ" />
+        <meta content="width=device-width, maximum-scale=1, user-scalable=yes" name="viewport">
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">
+		
+		    <meta name="description" content="Airmail" data-react-helmet="true">
+		    <meta name="twitter:site" content="@Airmailer" data-react-helmet="true">
+		    <meta name="twitter:title" content="Airmail" data-react-helmet="true">
+		    <meta name="twitter:description" content="Airmail" data-react-helmet="true">
+		    <!--    
+		-->
+		    <meta name="twitter:card" content="summary_large_image" data-react-helmet="true">
+		    <meta name="twitter:creator" content="@Airmailer" data-react-helmet="true">
+		    <meta name="twitter:image" content="http://airmailapp.com/img/website-3.0-ios-v5.jpg" data-react-helmet="true">
+
+		    <meta property="og:title" content="Airmail" data-react-helmet="true">
+		    <meta property="og:description" content="Twitter Og Description" data-react-helmet="true">
+		    <meta property="og:type" content="website" data-react-helmet="true">
+		    <!--    
+		-->
+		    <meta property="og:image" content="https://airmailapp.com/img/website-3.0-ios-v5.jpg" data-react-helmet="true">
+		    <meta property="og:image:secure_url" content="https://airmailapp.com/img/website-3.0-ios-v5.jpg" data-react-helmet="true">
+
+
+    <title>
+        Airmail - Email Client for iPhone, iPad and Mac
+    </title>
+
+
+
+<style>
+
+/*
+ * See: https://fonts.google.com/license/googlerestricted
+ */
+/* cyrillic */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Google Sans Italic'), local('GoogleSans-Italic'), url(https://fonts.gstatic.com/s/googlesans/v16/4UaErENHsxJlGDuGo1OIlL3L8phULilENlYQ_Q.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Google Sans Italic'), local('GoogleSans-Italic'), url(https://fonts.gstatic.com/s/googlesans/v16/4UaErENHsxJlGDuGo1OIlL3L8p9ULilENlYQ_Q.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Google Sans Italic'), local('GoogleSans-Italic'), url(https://fonts.gstatic.com/s/googlesans/v16/4UaErENHsxJlGDuGo1OIlL3L8pNULilENlYQ_Q.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Google Sans Italic'), local('GoogleSans-Italic'), url(https://fonts.gstatic.com/s/googlesans/v16/4UaErENHsxJlGDuGo1OIlL3L8pJULilENlYQ_Q.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Google Sans Italic'), local('GoogleSans-Italic'), url(https://fonts.gstatic.com/s/googlesans/v16/4UaErENHsxJlGDuGo1OIlL3L8pxULilENlY.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Google Sans Medium Italic'), local('GoogleSans-MediumItalic'), url(https://fonts.gstatic.com/s/googlesans/v16/4UaZrENHsxJlGDuGo1OIlL3L-m93OwBmO3wq9IqeuA.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Google Sans Medium Italic'), local('GoogleSans-MediumItalic'), url(https://fonts.gstatic.com/s/googlesans/v16/4UaZrENHsxJlGDuGo1OIlL3L-m93OwdmO3wq9IqeuA.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Google Sans Medium Italic'), local('GoogleSans-MediumItalic'), url(https://fonts.gstatic.com/s/googlesans/v16/4UaZrENHsxJlGDuGo1OIlL3L-m93OwtmO3wq9IqeuA.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Google Sans Medium Italic'), local('GoogleSans-MediumItalic'), url(https://fonts.gstatic.com/s/googlesans/v16/4UaZrENHsxJlGDuGo1OIlL3L-m93OwpmO3wq9IqeuA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Google Sans Medium Italic'), local('GoogleSans-MediumItalic'), url(https://fonts.gstatic.com/s/googlesans/v16/4UaZrENHsxJlGDuGo1OIlL3L-m93OwRmO3wq9Io.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Google Sans Bold Italic'), local('GoogleSans-BoldItalic'), url(https://fonts.gstatic.com/s/googlesans/v16/4UaZrENHsxJlGDuGo1OIlL3L-idxOwBmO3wq9IqeuA.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Google Sans Bold Italic'), local('GoogleSans-BoldItalic'), url(https://fonts.gstatic.com/s/googlesans/v16/4UaZrENHsxJlGDuGo1OIlL3L-idxOwdmO3wq9IqeuA.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Google Sans Bold Italic'), local('GoogleSans-BoldItalic'), url(https://fonts.gstatic.com/s/googlesans/v16/4UaZrENHsxJlGDuGo1OIlL3L-idxOwtmO3wq9IqeuA.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Google Sans Bold Italic'), local('GoogleSans-BoldItalic'), url(https://fonts.gstatic.com/s/googlesans/v16/4UaZrENHsxJlGDuGo1OIlL3L-idxOwpmO3wq9IqeuA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Google Sans Bold Italic'), local('GoogleSans-BoldItalic'), url(https://fonts.gstatic.com/s/googlesans/v16/4UaZrENHsxJlGDuGo1OIlL3L-idxOwRmO3wq9Io.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Google Sans Regular'), local('GoogleSans-Regular'), url(https://fonts.gstatic.com/s/googlesans/v16/4UaGrENHsxJlGDuGo1OIlL3Kwp5eKQtGBlc.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Google Sans Regular'), local('GoogleSans-Regular'), url(https://fonts.gstatic.com/s/googlesans/v16/4UaGrENHsxJlGDuGo1OIlL3Nwp5eKQtGBlc.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Google Sans Regular'), local('GoogleSans-Regular'), url(https://fonts.gstatic.com/s/googlesans/v16/4UaGrENHsxJlGDuGo1OIlL3Bwp5eKQtGBlc.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Google Sans Regular'), local('GoogleSans-Regular'), url(https://fonts.gstatic.com/s/googlesans/v16/4UaGrENHsxJlGDuGo1OIlL3Awp5eKQtGBlc.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Google Sans Regular'), local('GoogleSans-Regular'), url(https://fonts.gstatic.com/s/googlesans/v16/4UaGrENHsxJlGDuGo1OIlL3Owp5eKQtG.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Google Sans Medium'), local('GoogleSans-Medium'), url(https://fonts.gstatic.com/s/googlesans/v16/4UabrENHsxJlGDuGo1OIlLU94Yt3CwZsPF4oxIs.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Google Sans Medium'), local('GoogleSans-Medium'), url(https://fonts.gstatic.com/s/googlesans/v16/4UabrENHsxJlGDuGo1OIlLU94YtwCwZsPF4oxIs.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Google Sans Medium'), local('GoogleSans-Medium'), url(https://fonts.gstatic.com/s/googlesans/v16/4UabrENHsxJlGDuGo1OIlLU94Yt8CwZsPF4oxIs.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Google Sans Medium'), local('GoogleSans-Medium'), url(https://fonts.gstatic.com/s/googlesans/v16/4UabrENHsxJlGDuGo1OIlLU94Yt9CwZsPF4oxIs.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Google Sans Medium'), local('GoogleSans-Medium'), url(https://fonts.gstatic.com/s/googlesans/v16/4UabrENHsxJlGDuGo1OIlLU94YtzCwZsPF4o.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Google Sans Bold'), local('GoogleSans-Bold'), url(https://fonts.gstatic.com/s/googlesans/v16/4UabrENHsxJlGDuGo1OIlLV154t3CwZsPF4oxIs.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Google Sans Bold'), local('GoogleSans-Bold'), url(https://fonts.gstatic.com/s/googlesans/v16/4UabrENHsxJlGDuGo1OIlLV154twCwZsPF4oxIs.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Google Sans Bold'), local('GoogleSans-Bold'), url(https://fonts.gstatic.com/s/googlesans/v16/4UabrENHsxJlGDuGo1OIlLV154t8CwZsPF4oxIs.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Google Sans Bold'), local('GoogleSans-Bold'), url(https://fonts.gstatic.com/s/googlesans/v16/4UabrENHsxJlGDuGo1OIlLV154t9CwZsPF4oxIs.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Google Sans Bold'), local('GoogleSans-Bold'), url(https://fonts.gstatic.com/s/googlesans/v16/4UabrENHsxJlGDuGo1OIlLV154tzCwZsPF4o.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+a,
+address,
+b,
+body,
+code,
+div,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+img,
+li,
+nav,
+p,
+s,
+section,
+small,
+span,
+sub,
+time,
+u,
+ul,
+var,
+video {
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+	margin: 0;
+	padding: 0
+}
+
+html {
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	font-family: 'Google Sans', sans-serif;
+	font-size: 100%;
+	-webkit-text-size-adjust: none;
+}
+
+ul {
+	list-style: none
+}
+
+a img {
+	border: none
+}
+
+body,
+html {
+	height: 100%;
+	margin: 0 ;
+	text-align: center;
+	color: #333;
+	letter-spacing: .015em
+}
+
+a {
+	cursor: pointer;
+	color: #097cda;
+	text-decoration: none
+}
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+
+.blog-wrapper,
+.wrapper {
+	max-width: 64em;
+	position: relative;
+	margin: 0 auto;
+	padding: 2em 1.5em
+}
+
+
+footer,
+header,
+nav,
+section {
+	display: block
+}
+
+	.navigation {
+		margin-bottom: 2.5em;
+			text-align: left;
+
+	}
+	
+	.navigation-item {
+	display: inline-block;
+	margin-right: 2em
+}
+
+.navigation-item a {
+	transition-property: color;
+	transition-duration: .3s;
+	color: #a3abb3
+}
+
+.navigation-item a:hover,
+h1,
+h2,
+h3 {
+}
+
+h1 {
+	line-height: 1.2em
+}
+
+h2 {
+	line-height: 1.3em
+}
+
+h3 {
+	line-height: 1.5em
+}
+
+b {
+	font-weight: 800;
+}
+
+
+
+.section-header-detail {
+	font-size: 2em;
+	font-weight: 500;
+	letter-spacing: .022em;
+	margin-bottom: 1rem;
+	text-align: left
+}
+
+.section-header {
+	letter-spacing: .002em;
+	margin-bottom: 1rem;
+	text-align: center;
+	font-size: 2.8em
+}
+
+.section-sub-header {
+	color: #888;
+	letter-spacing: .025em;
+	margin-bottom: 1rem;
+	font-size: 19px
+}
+
+.section-sub-header-detail {
+	color: #888;
+	margin-bottom: 1rem;
+	font-size: 19px;
+	text-align: left;
+	letter-spacing: .002em
+}
+
+.navigation {
+	overflow: hidden;
+	margin-bottom: 1.5em;
+	padding-bottom: .5em;
+	margin-right: -2em;
+	margin-left: -2em;
+	padding-left: 2em;
+	overflow-x: scroll;
+	-webkit-overflow-scrolling: touch
+}
+
+.navigation::-webkit-scrollbar {
+	display: none;
+	-webkit-appearance: none
+}
+
+
+.navigation-elements {
+	padding-top: .7em;
+	padding-bottom: .5em;
+	white-space: nowrap;
+	letter-spacing: .012em
+}
+
+.navigation-item {
+	display: inline-block;
+	margin-right: 2em
+}
+
+.navigation-item a {
+	transition-property: color;
+	transition-duration: .3s;
+	color: #a3abb3
+}
+
+.header {
+	overflow: hidden;
+	border-top: 0;
+	-webkit-font-smoothing: subpixel-antialiased;
+	padding: 0 0 2em
+}
+
+.header-title {
+	font-size: 2.8em;
+	color: #555;
+	margin-bottom: .75rem;
+	position: relative;
+	text-align: center;
+	font-weight:400;
+
+}
+
+.header-tagline {
+	font-size: 1.7em;
+	color: #a3abb3;
+	margin-bottom: 2rem;
+	position: relative;
+	text-align: center;
+	font-weight:400;
+}
+
+.footer-copyright {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	text-align: center
+}
+
+
+
+.footer-nav li {
+	display: inline;
+	margin-left: 1em;
+	margin-right: 1em
+}
+
+
+.alternate-bg {
+	background-color: #fbfbfb;
+	border-bottom: solid 1px #dedede;
+	border-top: solid 1px #dedede
+}
+
+p {
+	font-size: 1.2em;
+	font-weight: 350;
+	letter-spacing: .012em
+}
+
+.feature-theme-text {
+	margin-bottom: 2em
+}
+
+
+
+.wrapper {
+	max-width: 64em;
+	position: relative;
+	margin: 0 auto;
+	padding: 2em 1.5em
+}
+
+.feature-theme-image {
+	max-width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+	display: inline;
+	height: auto;
+	text-align: center;
+		-webkit-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-app-region: no-drag;
+
+}
+
+.feature-style-image {
+	max-width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+	display: inline-block;
+	height: auto;
+	text-align: center
+}
+
+.features-glance-list {
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	margin-bottom: 1em;
+	font-size: 1.3em;
+		text-align: left
+
+}
+
+.multiply {
+	mix-blend-mode: darken
+}
+
+.features-glance-list li:before {
+	content: "▪︎";
+	
+	color: #097cda;
+	display: inline-block;
+	margin-right: .5em;
+	font-size: 1.3em
+}
+
+.features-glance-list li {
+	text-indent: -.7em;
+	margin-bottom: .75em;
+}
+
+
+
+
+.feature-theme-text {
+	margin-bottom: 2em
+}
+
+	 .section-header {
+		text-align: center;
+		margin-bottom: 2.5rem
+	}
+	
+	.section-header {
+	font-weight: 500;
+	color: #222;
+	letter-spacing: .002em;
+	margin-bottom: 1rem;
+	text-align: center;
+	font-size: 3em
+}
+
+p {
+	font-size: 1.2em;
+	font-weight: 350;
+}
+
+
+b {
+	font-weight: 800;
+	color: #222;
+	}
+	
+	.feature-theme-image {
+	max-width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+	display: inline;
+	height: auto;
+	text-align: center
+}
+
+.navigation-elements {
+	padding-top: .7em;
+	padding-bottom: .5em;
+	white-space: nowrap;
+	letter-spacing: .012em
+}
+
+.navigation-item a {
+	transition-property: color;
+	transition-duration: .3s;
+	color: #a3abb3
+}
+
+.feature-themes .wrapper,
+.footer {
+	overflow: hidden
+}
+
+.feature-theme-text {
+	margin-bottom: 2em
+}
+
+.navigation-item a:hover,
+h1,
+h2,
+h3 {
+	color: #222;
+	
+}
+
+.navigation-logo {
+	margin-right: 1em;
+	margin-left: 2em;
+	margin-top: -0.2em;
+	float: left
+	
+}
+
+.hl a{
+	color: #d73554;
+}
+
+.hl a:hover{
+	color: #c27785;
+}
+
+
+ul {
+	list-style: none
+}
+
+.footer-nav li {
+	display: inline;
+	margin-left: 1em;
+	margin-right: 1em
+}
+
+
+@media min-width64em {
+	.navigation-item.
+ 
+
+			}
+
+
+
+@media min-width35em {
+	.wrapper {
+		padding: 2em
+		
+	}
+}
+	
+	.wrapper {
+	overflow: hidden
+}
+
+
+
+@media (min-width: 64em) {
+
+    .navigation-item.navigation-lang,
+    .navigation-lang.navigation-item-selected {
+        float: right
+    }
+}
+
+.trademarks {
+	color:#888 ;	
+	font-size: 0.9em;
+}
+
+pricing-intro p {
+color: red ;	
+}
+
+@media (min-width: 50em) {
+    .home-into-section {
+        float: left;
+        width: 46%
+    }
+
+    .home-into-section:nth-child(1) {
+        margin-right: 4%
+    }
+
+    .home-into-section:nth-child(2) {
+        margin-left: 4%
+    }
+}
+
+
+</style>
+        
+    </head>
+<body>
+
+    <div class="header alternate-bg">
+        <div class="wrapper">
+
+            <nav class="navigation multiply">
+                <a href="../docs.airmailapp.com/index.html" name="homepage">
+          <img class="navigation-logo" src="static/images/icon-98x98@2x.png" srcset="https://bloop.s3.us-east-1.amazonaws.com/iconv4.png" width="48" height="48">
+
+                </a>
+
+                <ul class="navigation-elements">
+
+                    <li class="navigation-item "><a href="../docs.airmailapp.com/index.html" name="homepage"> Airmail </a></li>
+                    <li class="navigation-item navigation-lang"><a href="../docs.airmailapp.com/index.html#ios" name="Airmail on iPhone and iPad">iOS</a></li>
+                    <li class="navigation-item navigation-lang"><a href="disclaimer.html#mac" name="Airmail on Mac">macOS</a></li>
+                    <li class="navigation-item navigation-lang"><a href="disclaimer.html#ipad" name="Airmail's Blog">iPad</a></li>
+                    <li class="navigation-item navigation-lang"><a href="disclaimer.html#pricing" name="Pricing">Pricing</a></li>
+                    <li class="navigation-item navigation-lang"><a href="https://medium.com/@Airmail" name="Airmail's Blog">Blog</a></li>
+                    <li class="navigation-item navigation-lang"><a href="../help.airmailapp.com/index.html" name="Airmail's features">Support</a></li>
+
+                </ul>
+            </nav>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <section class="feature-glance">
+        <div class="wrapper">
+
+
+
+
+
+            <h2 class="section-header">Google API Disclosure</h2>
+            <div class="central-image">
+
+            </div>
+            <br><br>
+            <ul class="features-glance-list">
+
+				
+				
+				
+				Airmail use and transfer to any other app of information received from Google APIs will adhere to <a href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes">Google API Services User Data Policy</a>, including the Limited Use requirements. 
+            </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+    </section>
+
+
+
+    <a name="community" id="community" name="community"></a>
+
+
+    <div class="">
+        <footer class="footer wrapper ">
+
+
+            <ul class="footer-nav">
+                <li><a href="https://twitter.com/airmailapp" name="Airmail's on Twitter">Twitter</a></li>
+                <li><a href="https://www.reddit.com/r/Airmailreddit/" >Reddit</a></li>
+                <li><a href="http://airmailapp.uservoice.com/">Feature Request</a></li>
+                <li><a href="vdp/index.html">Vulnerability Disclosure Program </a></li>
+
+
+ 
+
+            </ul>
+<br>
+
+
+
+            <ul class="footer-nav">
+                <li><a href="https://www.iubenda.com/privacy-policy/519354/legal">Privacy</a></li>
+                <li><a href="disclaimer.html">Google API Disclosure</a></li>
+
+                <li><a href="privacymac.html">Privacy macOS</a></li>
+                <li><a href="privacyios.html">Privacy iOS</a></li>
+                <li><a href="dataremoval.html/index.html">Data Removal</a></li>
+
+                <li><a href="mailto:contact@airmailapp.com" name="Airmail's on Twitter">Contact</a></li>
+                <li><a href="https://bloop.info" name="Bloop.">Bloop.</a></li>
+            </ul>
+
+<br>
+
+<div class="trademarks">
+Apple, the Apple logo, Macbook Pro, and iMac are trademarks of Apple Inc.,registered in the U.S. and other countries. <br> App Store and Mac App Store is a service mark of Apple Inc.
+</div>
+
+
+        </footer>
+
+    </div>
+
+
+
+
+</body>
+
+
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="cda391d2-f5f9-4dc6-bec0-935bb2d9a44e";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
+
+</html>
